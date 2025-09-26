@@ -35,16 +35,6 @@
         }
       }
     </script>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.1.1/",
-    "react": "https://aistudiocdn.com/react@^19.1.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0"
-  }
-}
-</script>
 <style>
   html {
     background-color: #0D1117;
@@ -133,10 +123,22 @@
   .glow-ziglar { background-image: radial-gradient(circle at 50% 50%, rgba(244, 114, 182, 0.2), transparent 50%); }
   
 </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "vite": "https://aistudiocdn.com/vite@^7.1.7",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.21.0",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.0.3",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
 </head>
   <body class="text-gray-300 antialiased">
     <div class="aurora-background"></div>
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>
