@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RepIQ - AI Sales Coach</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-green': '#34D399',
+              'brand-red': '#F87171',
+              'brand-purple': '#8B5CF6',
+              'dark': {
+                '900': '#0D1117', // Deep blue-night
+                '850': '#161B22', // Slightly lighter blue-night
+                '800': '#1F2937', // Card background (gray-800)
+                '700': '#374151', // Borders (gray-700)
+                '600': '#4B5563', // Hover states (gray-600)
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: 0, transform: 'translateY(10px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              },
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0"
+  }
+}
+</script>
+<style>
+  html {
+    background-color: #0D1117;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -2;
+    pointer-events: none;
+  }
+
+  .aurora-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .aurora-background::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 150vw;
+      height: 150vh;
+      background: radial-gradient(circle at center, rgba(139, 92, 246, 0.4) 0%, rgba(52, 211, 153, 0.2) 35%, rgba(13,17,23,0) 70%);
+      transform-origin: center center;
+      animation: rotateAurora 20s linear infinite;
+      opacity: 0.6;
+      filter: blur(100px);
+  }
+
+  @keyframes rotateAurora {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  /* Scroll Animation Styles */
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Style Showcase Section BG */
+  .style-showcase-bg {
+    position: relative;
+    background-image: radial-gradient(circle at 50% 30%, rgba(139, 92, 246, 0.1), transparent 40%);
+  }
+
+  .glow-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: background-image 0.8s ease-in-out;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .glow-cardone { background-image: radial-gradient(circle at 50% 50%, rgba(239, 68, 68, 0.2), transparent 50%); }
+  .glow-voss { background-image: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.2), transparent 50%); }
+  .glow-belfort { background-image: radial-gradient(circle at 50% 50%, rgba(234, 179, 8, 0.2), transparent 50%); }
+  .glow-blount { background-image: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.2), transparent 50%); }
+  .glow-ziglar { background-image: radial-gradient(circle at 50% 50%, rgba(244, 114, 182, 0.2), transparent 50%); }
+  
+</style>
+</head>
+  <body class="text-gray-300 antialiased">
+    <div class="aurora-background"></div>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

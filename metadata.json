@@ -1,0 +1,7 @@
+{
+  "name": "RepIQ",
+  "description": "Crush sales goals with RepIQ! AI-powered role-play, live call co-pilot, and team analytics help sales reps boost their sales IQ and close like a pro.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
