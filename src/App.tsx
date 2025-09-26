@@ -1,18 +1,18 @@
 
 import React, { useState, useEffect } from 'react';
-import LandingPage from '../components/LandingPage';
-import CoachView from '../components/CoachView';
-import AdminDashboard from '../components/admin/AdminDashboard';
-import LoginView from '../components/LoginView';
-import { Scenario, UserProfile, User, CompletedSession } from '../types';
-import LandingLayout from '../components/LandingLayout';
-import PricingPage from '../components/PricingPage';
-import PaymentPage from '../components/PaymentPage';
-import PaymentConfirmationPage from '../components/PaymentConfirmationPage';
-import OnboardingGuide from '../components/OnboardingGuide';
-import { LanguageProvider } from '../contexts/LanguageContext';
-import { getInitialData } from '../services/apiService';
-import { Spinner } from '../components/common/Spinner';
+import LandingPage from './components/LandingPage';
+import CoachView from './components/CoachView';
+import AdminDashboard from './components/admin/AdminDashboard';
+import LoginView from './components/LoginView';
+import { Scenario, UserProfile, User, CompletedSession } from './types';
+import LandingLayout from './components/LandingLayout';
+import PricingPage from './components/PricingPage';
+import PaymentPage from './components/PaymentPage';
+import PaymentConfirmationPage from './components/PaymentConfirmationPage';
+import OnboardingGuide from './components/OnboardingGuide';
+import { LanguageProvider } from './contexts/LanguageContext';
+import { getInitialData } from './services/apiService';
+import { Spinner } from './components/common/Spinner';
 
 type View = 'home' | 'pricing' | 'login' | 'coach' | 'admin' | 'payment' | 'payment_success';
 
@@ -238,7 +238,6 @@ const App: React.FC = () => {
                   setScenarios={setScenarios}
                   completedSessions={completedSessions}
                   setCompletedSessions={setCompletedSessions}
-                  allUsers={allUsers}
                 />;
       case 'payment':
         if (!planToPurchase) {

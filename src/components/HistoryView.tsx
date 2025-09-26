@@ -1,6 +1,4 @@
 
-
-
 import React, { useState } from 'react';
 import { CompletedSession, CoPilotSession } from '../types';
 import Card from './common/Card';

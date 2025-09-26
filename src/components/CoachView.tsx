@@ -292,7 +292,6 @@ const CoachView: React.FC<CoachViewProps> = ({
   }, [currentScenario, chatHistory, assignedPrograms, userProgress, userProfile.id, setAllCompletedSessions]);
 
   const handleReturnToDashboard = useCallback(() => {
-    // FIX: Changed undefined variable `currentCoPilot` to `currentCoPilotSession`
     if (appState === AppState.LIVE_ASSIST && currentCoPilotSession && currentCoPilotSession.turns.length > 0) {
       setCoPilotSessions(prev => [currentCoPilotSession, ...prev]);
     }

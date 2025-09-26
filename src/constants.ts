@@ -147,7 +147,6 @@ export const COACHING_ARCHETYPES: CoachingStyle[] = [
             name: 'Le Consultant',
             title: 'Diagnostiquer le problème racine',
             philosophy: 'Diagnostiquez le problème en profondeur avant de prescrire une solution. La vente est un processus d\'investigation.',
-            // FIX: Removed extraneous 'investigation' property and corrected the 'techniques' property definition.
             techniques: ['Questions de diagnostic (5 Pourquoi)', 'Co-créer la solution', 'Utiliser la logique et les données'],
             systemInstructionModifier: "Vous êtes un prospect qui sait que vous avez un problème, mais vous ne pouvez pas l'articuler clairement. Vous fournirez des symptômes vagues (par exemple, 'la productivité n'est tout simplement pas au niveau attendu'). Vous testerez la capacité de l'utilisateur à poser des questions précises et logiques pour découvrir la cause profonde avant qu'il ne propose une solution."
         }

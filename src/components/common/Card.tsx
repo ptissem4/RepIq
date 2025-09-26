@@ -1,8 +1,5 @@
 import React from 'react';
 
-// FIX: Allow passing additional HTML attributes (like 'id') to the Card component.
-// The CardProps now extends React.HTMLAttributes<HTMLDivElement> to accept any standard div attributes.
-// The component is updated to spread these additional props onto the underlying div element.
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
 }

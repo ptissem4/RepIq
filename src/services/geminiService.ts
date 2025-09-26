@@ -2,7 +2,6 @@ import { GoogleGenAI, Chat, Type } from "@google/genai";
 import { ChatMessage, MessageSender, Feedback, GeneratedResponse, ActionPlanItem, Scenario } from "../types";
 import { Language } from '../contexts/LanguageContext';
 
-// FIX: Use process.env.API_KEY as per the guidelines, instead of import.meta.env.
 // Ensure API_KEY is set in the environment
 if (!process.env.API_KEY) {
   throw new Error("API_KEY environment variable not set.");

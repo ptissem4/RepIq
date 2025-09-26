@@ -1,6 +1,4 @@
 
-
-
 import React from 'react';
 import { Scenario, UserStats, CompletedSession, UserProfile, CoachingProgram, UserProgramProgress } from '../types';
 import Card from './common/Card';
